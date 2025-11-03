@@ -24,7 +24,7 @@ class SpringDataColaboradorRepositoryTest {
     private ColaboradorJpaRepository jpaRepository;
 
     @InjectMocks
-    private ColaboradorRepositoryAdapter repository;
+    private SpringColaboradorRepositoryAdapter repository;
 
     private Colaborador colaborador;
     private ColaboradorEntity entity;
