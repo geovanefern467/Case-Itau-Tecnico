@@ -22,5 +22,10 @@ jobs:
       - name: Build and Test with Maven
         run: |
           mvn clean install
-          mvn test
+          mvn test jacoco:report
           echo "✅ Testes passaram (cobertura acima de 80%)"
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/

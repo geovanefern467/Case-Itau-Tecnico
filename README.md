@@ -27,8 +27,8 @@ O projeto foi desenvolvido utilizando **Java 22**, **Spring Boot** e **Arquitetu
 Cada colaborador possui:
 - **Matrícula** (identificador único)
 - **Nome**
+- **Data de admissão**
 - **Cargo**
-- **Time**
 
 ### Avaliação Comportamental
 São **4 perguntas fixas** para cada colaborador, cada uma com nota de **1 a 5**:
@@ -41,12 +41,12 @@ São **4 perguntas fixas** para cada colaborador, cada uma com nota de **1 a 5**
 
 ### Avaliação de Entregas (Desafios)
 - Cada colaborador deve ter entre **2 e 4 desafios** cadastrados
-- Cada desafio possui uma **descrição** e uma **pontuação de 0 a 100**
+- Cada desafio possui uma **descrição** e uma **pontuação de 1 a 5**
 - **Média de Desafios** = soma das pontuações / quantidade de desafios
 
 ### Cálculo da Nota Final
 ```
-Nota Final = ((Média Comportamental / 5) + (Média Desafios / 100)) / 2
+Nota Final = ((Média Comportamental / 4) + (Média Desafios / Quantidade Cadastrada)) / 2
 ```
 **Resultado normalizado:** sempre entre **0 e 1**
 
@@ -85,7 +85,7 @@ Infrastructure → Implementa detalhes técnicos (API, BD, etc)
 ## 🛠️ Tecnologias Utilizadas
 
 ### Backend
-- **Java 22** - Última versão LTS com recursos modernos
+- **Java 22** - Última versão com recursos modernos
 - **Spring Boot 3.x** - Framework principal
 - **Spring Data JPA** - ORM para persistência
 - **Lombok** - Redução de boilerplate (getters, setters, construtores)
@@ -256,8 +256,22 @@ O projeto possui **cobertura acima de 80%**, incluindo:
 
 ### Executar Testes
 ```bash
+# Executar todos os testes
 mvn test
+
+# Executar testes com relatório de cobertura
+mvn clean test jacoco:report
+
+# Ver relatório de cobertura (após executar comando acima)
+# Abrir: target/site/jacoco/index.html
 ```
+
+### Verificar Cobertura
+Após executar `mvn clean test jacoco:report`, o relatório HTML será gerado em:
+```
+target/site/jacoco/index.html
+```
+Abra este arquivo no navegador para visualizar a cobertura detalhada por classe e pacote.
 
 ---
 
