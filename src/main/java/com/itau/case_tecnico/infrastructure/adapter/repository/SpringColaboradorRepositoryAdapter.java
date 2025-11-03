@@ -18,11 +18,11 @@ interface ColaboradorJpaRepository extends JpaRepository<ColaboradorEntity, Long
 }
 
 @Component
-class ColaboradorRepositoryAdapter implements ColaboradorRepositoryPort {
-    private static final Logger log = LoggerFactory.getLogger(ColaboradorRepositoryAdapter.class);
+class SpringColaboradorRepositoryAdapter implements ColaboradorRepositoryPort {
+    private static final Logger log = LoggerFactory.getLogger(SpringColaboradorRepositoryAdapter.class);
     private final ColaboradorJpaRepository jpaRepository;
 
-    public ColaboradorRepositoryAdapter(ColaboradorJpaRepository jpaRepository) {
+    public SpringColaboradorRepositoryAdapter(ColaboradorJpaRepository jpaRepository) {
         this.jpaRepository = jpaRepository;
     }
 
