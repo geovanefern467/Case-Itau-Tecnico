@@ -5,6 +5,7 @@ target/
 .idea/
 *.iml
 .vscode/
+.idea/
 
 # OS
 .DS_Store
