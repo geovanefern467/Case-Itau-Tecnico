@@ -10,6 +10,9 @@
 - [API REST](#api-rest)
 - [Testes](#testes)
 - [Como Executar](#como-executar)
+- [Diagramas](#diagramas)
+- [Autor](#autor)
+- [Licença](#licença)
 
 ---
 
@@ -207,22 +210,24 @@ terraform/
 
 #### **Colaboradores**
 ```http
-POST   /api/colaboradores           # Criar colaborador
-GET    /api/colaboradores           # Listar todos
-GET    /api/colaboradores/{id}      # Buscar por ID
-GET    /api/colaboradores/{id}/nota-final  # Nota final calculada
+POST   /api/colaboradores                      # Criar colaborador
+GET    /api/colaboradores                      # Listar todos
+GET    /api/colaboradores/{colaborador_id}     # Buscar por ID
+GET    /api/colaboradores/{colaborador_id}/nota-final  # Nota final calculada
 ```
 
 #### **Avaliação Comportamental**
 ```http
-POST   /api/avaliacoes              # Registrar avaliação comportamental
-GET    /api/avaliacoes/{colaboradorId}  # Buscar avaliação
+POST   /api/avaliacoes-comportamentais         # Registrar avaliação comportamental
+GET    /api/avaliacoes-comportamentais         # Listar todas avaliações
+GET    /api/avaliacoes-comportamentais/colaboradores/{colaborador_id}  # Buscar avaliações por colaborador
 ```
 
 #### **Desafios**
 ```http
-POST   /api/desafios                # Criar desafio
-GET    /api/desafios/{colaboradorId}  # Listar desafios do colaborador
+POST   /api/desafios                           # Criar desafio
+GET    /api/desafios                           # Listar todos desafios
+GET    /api/desafios/colaboradores/{colaborador_id}  # Listar desafios do colaborador
 ```
 
 ### Testes com Insomnia
