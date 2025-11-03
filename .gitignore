@@ -15,3 +15,20 @@ Thumbs.db
 
 # Variáveis de ambiente (se houver arquivo local)
 .env
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Keep example file
+!terraform.tfvars.example
