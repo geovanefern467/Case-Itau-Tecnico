@@ -25,7 +25,7 @@ jobs:
         run: |
           set -e
           mvn clean install
-          mvn test jacoco:report
+          mvn test jacoco:check jacoco:report
           echo "✅ Testes passaram (cobertura acima de 80%)"
 
       - name: Upload Coverage Report
